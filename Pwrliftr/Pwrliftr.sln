@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2006
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pwrliftr", "Pwrliftr\Pwrliftr.csproj", "{F5FF2FD5-272D-4F0B-B1FB-1BAB0ADB3F30}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pwrliftr.App", "Pwrliftr.App\Pwrliftr.App.csproj", "{43C33EF5-82A5-4495-BA49-0CBD5C8B521F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F5FF2FD5-272D-4F0B-B1FB-1BAB0ADB3F30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F5FF2FD5-272D-4F0B-B1FB-1BAB0ADB3F30}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F5FF2FD5-272D-4F0B-B1FB-1BAB0ADB3F30}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F5FF2FD5-272D-4F0B-B1FB-1BAB0ADB3F30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43C33EF5-82A5-4495-BA49-0CBD5C8B521F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43C33EF5-82A5-4495-BA49-0CBD5C8B521F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43C33EF5-82A5-4495-BA49-0CBD5C8B521F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43C33EF5-82A5-4495-BA49-0CBD5C8B521F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
