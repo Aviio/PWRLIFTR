@@ -15,7 +15,7 @@
         Background="Transparent"
         WindowStartupLocation="CenterScreen"
         DataContext="{Binding Main, Source={StaticResource Locator}}">
-    
+
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -24,30 +24,23 @@
         </ResourceDictionary>
     </Window.Resources>
 
-    <Grid x:Name="LayoutRoot">
-        <Grid Background="black">
-            <Grid.Resources>
-                <Style x:Key="DefaultGridStyle" TargetType="{x:Type Grid}">
-                    <Style.Resources>
-                        <Style TargetType="{x:Type TextBlock}">
-                            <Setter Property="Foreground" Value="white" />
-                        </Style>
-                        <Style TargetType="{x:Type TextBox}">
-                            <Setter Property="Foreground" Value="white" />
-                        </Style>
-                    </Style.Resources>
-                </Style>
-            </Grid.Resources>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="70"></RowDefinition>
-                <RowDefinition Height="*"></RowDefinition>
-                <RowDefinition Height="30"></RowDefinition>
-            </Grid.RowDefinitions>
+    <Grid x:Name="LayoutRoot" Background="black">
+        <Grid.Resources>
+        </Grid.Resources>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="125"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.ColumnSpan="2" Grid.Row="0">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="450"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
-
             <Rectangle Grid.ColumnSpan="2" Fill="Gray" MouseDown="Rectangle_MouseDown"></Rectangle>
             <Label Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left">
                 <TextBlock Text="PWRLIFTR" FontSize="49" Foreground="Black" ></TextBlock>
@@ -76,51 +69,38 @@
                     </Canvas>
                 </Viewbox>
             </Grid>
+        </Grid> 
+        
+       
+        <Grid Grid.Column="0" Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="125"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
 
-            <Grid Grid.Column="0" Grid.Row="1" Style="{StaticResource DefaultGridStyle}">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"></RowDefinition>
-                    <RowDefinition Height="*"></RowDefinition>
-                    <RowDefinition Height="*"></RowDefinition>
-                    <RowDefinition Height="*"></RowDefinition>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="125"></ColumnDefinition>
-                    <ColumnDefinition Width="*"></ColumnDefinition>
-                </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" Grid.Row="0" Height="100" Width="100" HorizontalAlignment="Center">
+                <TextBlock Text="Start new session" TextAlignment="Center" TextWrapping="Wrap"></TextBlock>
+            </Button>
 
-                <Button Grid.Column="0" Grid.Row="0" Height="100" Width="100" HorizontalAlignment="Center"></Button>
-                <Label Grid.Column="1" Grid.Row="0" VerticalAlignment="Center">
-                    <TextBlock Text="Start new session" FontSize="32"></TextBlock>
-                </Label>
+            <Button Grid.Column="0" Grid.Row="1" Height="100" Width="100" HorizontalAlignment="Center">
+                <TextBlock Text="Open previous session" TextAlignment="Center" TextWrapping="Wrap"></TextBlock>
+            </Button>
 
-                <Button Grid.Column="0" Grid.Row="1" Height="100" Width="100" HorizontalAlignment="Center"></Button>
-                <Label Grid.Column="1" Grid.Row="1" VerticalAlignment="Center">
-                    <TextBlock Text="Open previous session" FontSize="32"></TextBlock>
-                </Label>
+            <Button Grid.Column="0" Grid.Row="2" Height="100" Width="100" HorizontalAlignment="Center">
+                <TextBlock Text="Manage competitors" TextAlignment="Center" TextWrapping="Wrap"></TextBlock>
+            </Button>
 
-                <Button Grid.Column="0" Grid.Row="2" Height="100" Width="100" HorizontalAlignment="Center"></Button>
-                <Label Grid.Column="1" Grid.Row="2" VerticalAlignment="Center">
-                    <TextBlock Text="Manage competitors" FontSize="32"></TextBlock>
-                </Label>
-
-                <Button Grid.Column="0" Grid.Row="3" Height="100" Width="100" HorizontalAlignment="Center"></Button>
-                <Label Grid.Column="1" Grid.Row="3" VerticalAlignment="Center">
-                    <TextBlock Text="Settings" FontSize="32"></TextBlock>
-                </Label>
-            </Grid>
-
-            <Grid Grid.Column="1">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="100"></RowDefinition>
-                    <RowDefinition Height="*"></RowDefinition>
-                    <RowDefinition Height="50"></RowDefinition>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"></ColumnDefinition>
-                </Grid.ColumnDefinitions>
-            </Grid>
+            <Button Grid.Column="0" Grid.Row="3" Height="100" Width="100" HorizontalAlignment="Center">
+                <TextBlock Text="Settings" TextAlignment="Center" TextWrapping="Wrap"></TextBlock>
+            </Button>
         </Grid>
-
+        
+        <ContentControl Grid.Column="1" Grid.Row="1" Foreground="White" Content="{Binding CurrentContent}"></ContentControl>
     </Grid>
 </Window>
