@@ -15,7 +15,7 @@ namespace Pwrliftr.App
         public MainMenu()
         {
             InitializeComponent();
-            Closing += (s, e) => ViewModelLocator.Cleanup();
+           
         }
 
         private void Rectangle_MouseDown(object sender, MouseButtonEventArgs e)

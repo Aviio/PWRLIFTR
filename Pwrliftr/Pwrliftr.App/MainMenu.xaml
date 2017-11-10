@@ -12,9 +12,9 @@
         ResizeMode="NoResize"
         ShowInTaskbar="True"
         AllowsTransparency="True"
-        Background="Transparent"
+        Background="#FFDADADA"
         WindowStartupLocation="CenterScreen"
-        DataContext="{Binding Main, Source={StaticResource Locator}}">
+        DataContext="{StaticResource Main}">
 
     <Window.Resources>
         <ResourceDictionary>
@@ -24,83 +24,63 @@
         </ResourceDictionary>
     </Window.Resources>
 
-    <Grid x:Name="LayoutRoot" Background="black">
-        <Grid.Resources>
-        </Grid.Resources>
+    <Grid x:Name="Layout">
         <Grid.RowDefinitions>
-            <RowDefinition Height="70"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="125"></ColumnDefinition>
-            <ColumnDefinition Width="*"></ColumnDefinition>
-        </Grid.ColumnDefinitions>
 
-        <Grid Grid.ColumnSpan="2" Grid.Row="0">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"></ColumnDefinition>
-                <ColumnDefinition Width="*"></ColumnDefinition>
-            </Grid.ColumnDefinitions>
-            <Rectangle Grid.ColumnSpan="2" Fill="Gray" MouseDown="Rectangle_MouseDown"></Rectangle>
-            <Label Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left">
-                <TextBlock Text="PWRLIFTR" FontSize="49" Foreground="Black" ></TextBlock>
-            </Label>
-
-            <Grid Grid.Row="0" Grid.Column="1">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"></RowDefinition>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"></ColumnDefinition>
-                    <ColumnDefinition Width="*"></ColumnDefinition>
-                    <ColumnDefinition Width="60"></ColumnDefinition>
-                    <ColumnDefinition Width="60"></ColumnDefinition>
-                </Grid.ColumnDefinitions>
-
-                <Viewbox x:Name="DbStatus" Width="48" Height="48" Grid.Column="2" HorizontalAlignment="Right">
-                    <Canvas Width="24" Height="24">
-                        <Path Data="M12,3C7.58,3 4,4.79 4,7C4,9.21 7.58,11 12,11C16.42,11 20,9.21 20,7C20,4.79 16.42,3 12,3M4,9V12C4,14.21 7.58,16 12,16C16.42,16 20,14.21 20,12V9C20,11.21 16.42,13 12,13C7.58,13 4,11.21 4,9M4,14V17C4,19.21 7.58,21 12,21C16.42,21 20,19.21 20,17V14C20,16.21 16.42,18 12,18C7.58,18 4,16.21 4,14Z" Fill="Black" />
-                    </Canvas>
-                </Viewbox>
-
-                <Viewbox x:Name="ExitButton" Width="48" Height="48" Grid.Column="3" HorizontalAlignment="Right" Margin="0, 0, 10, 0" MouseEnter="ExitButton_MouseEnter" MouseLeave="ExitButton_MouseLeave">
-                    <Canvas  Width="24" Height="24">
-                        <Path Data="M15,24H17V22H15M16.56,4.44L15.11,5.89C16.84,6.94 18,8.83 18,11A6,6 0 0,1 12,17A6,6 0 0,1 6,11C6,8.83 7.16,6.94 8.88,5.88L7.44,4.44C5.36,5.88 4,8.28 4,11A8,8 0 0,0 12,19A8,8 0 0,0 20,11C20,8.28 18.64,5.88 16.56,4.44M13,2H11V12H13M11,24H13V22H11M7,24H9V22H7V24Z" Fill="Black" />
-                    </Canvas>
-                </Viewbox>
-            </Grid>
-        </Grid> 
-        
-       
-        <Grid Grid.Column="0" Grid.Row="1">
+        <Grid x:Name="Content" Grid.Row="1">
             <Grid.RowDefinitions>
-                <RowDefinition Height="*"></RowDefinition>
-                <RowDefinition Height="*"></RowDefinition>
-                <RowDefinition Height="*"></RowDefinition>
-                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="70"/>
+                <RowDefinition Height="70"/>
+                <RowDefinition Height="70"/>
+                <RowDefinition Height="70"/>
+                <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="125"></ColumnDefinition>
-                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"/>
+                
             </Grid.ColumnDefinitions>
 
-            <Button Grid.Column="0" Grid.Row="0" Height="100" Width="100" HorizontalAlignment="Center">
-                <TextBlock Text="Start new session" TextAlignment="Center" TextWrapping="Wrap"></TextBlock>
-            </Button>
+            <StackPanel Grid.Row="0" 
+                        Grid.Column="0" 
+                        Grid.RowSpan="4"
+                        VerticalAlignment="Center">
 
-            <Button Grid.Column="0" Grid.Row="1" Height="100" Width="100" HorizontalAlignment="Center">
-                <TextBlock Text="Open previous session" TextAlignment="Center" TextWrapping="Wrap"></TextBlock>
-            </Button>
+                <Button Width="150" Height="50" Margin="0,10">
+                    <TextBlock>
+                        Start new competition
+                    </TextBlock>
+                </Button>
+                <Button Width="150" Height="50" Margin="0,0,0,10">
+                    <TextBlock>
+                        Load competition
+                    </TextBlock>
+                </Button>
+                <Button Width="150" Height="50" Margin="0,0,0,10">
+                    <TextBlock>
+                        Manage competetors
+                    </TextBlock>
+                </Button>
+                <Button Width="150" Height="50" Margin="0,0,0,10">
+                    <TextBlock>
+                        Settings
+                    </TextBlock>
+                </Button>
+            </StackPanel>
 
-            <Button Grid.Column="0" Grid.Row="2" Height="100" Width="100" HorizontalAlignment="Center">
-                <TextBlock Text="Manage competitors" TextAlignment="Center" TextWrapping="Wrap"></TextBlock>
-            </Button>
-
-            <Button Grid.Column="0" Grid.Row="3" Height="100" Width="100" HorizontalAlignment="Center">
-                <TextBlock Text="Settings" TextAlignment="Center" TextWrapping="Wrap"></TextBlock>
-            </Button>
         </Grid>
+
+        <Rectangle Grid.Row="0" Fill="#FF767676">
         
-        <ContentControl Grid.Column="1" Grid.Row="1" Foreground="White" Content="{Binding CurrentContent}"></ContentControl>
+        </Rectangle>
+
+        <Label Grid.Row="0" FontSize="48">
+            <TextBlock Text="PWRLIFTR" Height="16" FontSize="48" Foreground="White"> 
+               
+            </TextBlock>
+        </Label>
     </Grid>
+
 </Window>
