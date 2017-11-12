@@ -63,7 +63,7 @@
                         Manage competetors
                     </TextBlock>
                 </Button>
-                <Button Width="150" Height="50" Margin="0,0,0,10">
+                <Button Width="150" Height="50" Margin="0,0,0,10" Command="{Binding ShowSettingsCommand}">
                     <TextBlock>
                         Settings
                     </TextBlock>

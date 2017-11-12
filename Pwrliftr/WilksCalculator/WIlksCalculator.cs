@@ -21,16 +21,14 @@ namespace WilksCalculator
                 0.00004731582,
                 -0.00000009054
             };
+
         public double Calculate(long bodyWeight, long liftTotal, bool isMale)
         {
             
-
-            //todo: add womens figures
-
-            return liftTotal * (500 / ((isMale ? maleConstants[0] : femaleConstants[0]) + 
+            return liftTotal * (500 / ((isMale ? maleConstants[0] : femaleConstants[0]) +
                                        (isMale ? maleConstants[1] : femaleConstants[1]) * bodyWeight +
                                        (isMale ? maleConstants[2] : femaleConstants[2]) * Math.Pow(bodyWeight, 2) +
-                                       (isMale ? maleConstants[3] : femaleConstants[3]) * Math.Pow(bodyWeight, 3) + 
+                                       (isMale ? maleConstants[3] : femaleConstants[3]) * Math.Pow(bodyWeight, 3) +
                                        (isMale ? maleConstants[4] : femaleConstants[4]) * Math.Pow(bodyWeight, 4) +
                                        (isMale ? maleConstants[5] : femaleConstants[5]) * Math.Pow(bodyWeight, 5)));
         }
