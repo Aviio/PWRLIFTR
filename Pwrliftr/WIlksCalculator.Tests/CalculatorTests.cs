@@ -1,18 +1,27 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using NUnit.Framework;
+using System;
+
 using WilksCalculator;
 
 namespace WIlksCalculator.Tests
 {
-    [TestClass]
+    [TestFixture]
     public class CalculatorTests
     {
-        [TestMethod]
-        public void GivenIProvideValidParameters_ShouldReturnCorrectResponse()
+        [TestCase]
+        public void TestMaleCalculation()
         {
             var calculator = new WilksCalculator.WilksCalculator();
-            var result = calculator.Calculate(105, 530);
-            Assert.AreEqual(Math.Round(316.703385026073, 2), Math.Round(result, 2));
+            var result = calculator.Calculate(105, 530, true);
+            Assert.AreEqual(316.703385026073, result, 0.00000001);
+        }
+
+        [TestCase] 
+        public void TestFemaleCalculation()
+        {
+            var calculator = new WilksCalculator.WilksCalculator();
+            var result = calculator.Calculate(105, 530, false);
+            Assert.AreEqual(435.518929833504, result, 0.00000001);
         }
     }
 }
