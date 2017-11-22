@@ -44,13 +44,14 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CalculatorTests.cs" />
+    <Compile Include="PlateCalculatorTests.cs" />
+    <Compile Include="WilksCalculatorTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WilksCalculator\WilksCalculator.csproj">
+    <ProjectReference Include="..\WilksCalculator\Pwrliftr.Calculators.csproj">
       <Project>{C7837D9C-481A-4CE1-972D-C6D1C05F355D}</Project>
-      <Name>WilksCalculator</Name>
+      <Name>Pwrliftr.Calculators</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace WilksCalculator
+namespace Pwrliftr.Calculators
 {
     public class WilksCalculator
     {

@@ -1,4 +1,4 @@
-﻿namespace Pwrliftr.App.Model
+﻿namespace Pwrliftr.Model
 {
     public class DataItem
     {

@@ -1,7 +1,7 @@
 ﻿using System;
-using Pwrliftr.App.Model;
+using Pwrliftr.Model;
 
-namespace Pwrliftr.App.Design
+namespace Pwrliftr.Design
 {
     public class DesignDataService : IDataService
     {
@@ -9,7 +9,7 @@ namespace Pwrliftr.App.Design
         {
             // Use this to create design time data
 
-            var item = new DataItem("Welcome to MVVM Light [design]");
+            var item = new DataItem("PWRLIFTR");
             callback(item, null);
         }
     }

@@ -13,8 +13,7 @@
         ShowInTaskbar="True"
         AllowsTransparency="True"
         Background="#FFDADADA"
-        WindowStartupLocation="CenterScreen"
-        DataContext="{StaticResource Main}">
+        WindowStartupLocation="CenterScreen">
 
     <Window.Resources>
         <ResourceDictionary>

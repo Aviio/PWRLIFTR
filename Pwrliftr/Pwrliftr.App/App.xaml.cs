@@ -11,7 +11,6 @@ namespace Pwrliftr.App
         static App()
         {
             DispatcherHelper.Initialize();
-            
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Pwrliftr.App.Model
+namespace Pwrliftr.Model
 {
     public class DataService : IDataService
     {

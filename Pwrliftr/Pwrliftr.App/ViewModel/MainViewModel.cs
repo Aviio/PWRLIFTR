@@ -1,17 +1,18 @@
-﻿using GalaSoft.MvvmLight.CommandWpf;
+﻿using GalaSoft.MvvmLight;
+using GalaSoft.MvvmLight.CommandWpf;
 using System.ComponentModel;
 
 namespace Pwrliftr.App.ViewModel
 {
-    public class MainViewModel : INotifyPropertyChanged
+    public class MainViewModel : ViewModelBase
     {
         public MainViewModel()
         {
         }
 
-        
+
         private RelayCommand _showSettingsCommand;
-        
+
         public RelayCommand ShowSettingsCommand
         {
             get
@@ -27,18 +28,8 @@ namespace Pwrliftr.App.ViewModel
         private void ShowSettings()
         {
             var settingsPage = new Settings();
-            settingsPage.Show();
-        }
+            settingsPage.ShowDialog();
 
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        protected virtual void RaisePropertyChanged(string propertyName)
-        {
-            var handler = PropertyChanged;
-            if (handler != null)
-            {
-                handler(this, new PropertyChangedEventArgs(propertyName));
-            }
         }
     }
 }

@@ -4,8 +4,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 			 xmlns:ignore="http://www.galasoft.ch/ignore"
-             xmlns:System="clr-namespace:System;assembly=mscorlib" 
-             xmlns:vm="clr-namespace:Pwrliftr.App.ViewModel"
+             xmlns:System="clr-namespace:System;assembly=mscorlib"
              StartupUri="MainMenu.xaml"
              mc:Ignorable="d ignore">
     
@@ -14,7 +13,7 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Styles/Styles.xaml" />
             </ResourceDictionary.MergedDictionaries>
-            <vm:MainViewModel x:Key="Main" />
+            
             <System:String x:Key="AppName">PWRLIFR</System:String>
         </ResourceDictionary>
     </Application.Resources>
